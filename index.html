@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1a5d1a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icone.svg">
+<title>Preços Agrícolas — Angola</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f6f3; color: #1c231c; }
+  header { background: linear-gradient(135deg, #1a5d1a, #2e8b2e); color: #fff; padding: 16px; position: sticky; top: 0; z-index: 2; }
+  header h1 { font-size: 1.15rem; }
+  #estado { font-size: .78rem; opacity: .9; margin-top: 4px; }
+  main { padding: 12px; max-width: 640px; margin: 0 auto; }
+  .cartao { background: #fff; border-radius: 14px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .cartao h2 { font-size: 1rem; display: flex; justify-content: space-between; align-items: center; }
+  .variedade { font-size: .8rem; color: #2e8b2e; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: .85rem; }
+  td, th { padding: 5px 4px; text-align: left; border-top: 1px solid #eef1ed; }
+  th { color: #667; font-weight: 600; font-size: .75rem; text-transform: uppercase; }
+  .preco { font-weight: 700; white-space: nowrap; }
+  .tipo { font-size: .7rem; padding: 2px 8px; border-radius: 10px; color: #fff; }
+  .informal { background: #c77b0a; }
+  .formal { background: #2b6cb0; }
+  .barato { color: #0a6d0a; }
+  .resumo { font-size: .8rem; color: #445; margin-top: 8px; background: #f0f6f0; border-radius: 8px; padding: 8px; }
+  .botoes { display: flex; gap: 8px; margin: 14px 0 30px; }
+  .botoes button { flex: 1; border: 0; border-radius: 10px; padding: 12px; font-size: .9rem; font-weight: 600; color: #fff; cursor: pointer; }
+  .bt-whats { background: #25d366; }
+  .bt-face { background: #1877f2; }
+  .bt-insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+  .aviso { font-size: .72rem; color: #778; text-align: center; padding-bottom: 12px; }
+  .fontes { font-size: .72rem; color: #667; border-top: 1px solid #dde2da; padding: 12px 4px 28px; }
+  .fontes h3 { font-size: .8rem; color: #1a5d1a; margin-bottom: 6px; }
+  .fontes ul { margin: 0 0 4px 18px; }
+  .fontes a { color: #2b6cb0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🇦🇴 Preços Agrícolas — Angola</h1>
+  <div id="estado">A carregar…</div>
+</header>
+<main>
+  <div id="lista"></div>
+  <div class="botoes">
+    <button class="bt-whats" onclick="partilharWhatsApp()">WhatsApp</button>
+    <button class="bt-insta" onclick="partilharInstagram()">Instagram</button>
+  </div>
+  <p class="aviso">Preços de referência oficiais (Decreto Exec. Conj. 16/25) e de mercado.
+  Actualização automática a cada 15 minutos quando há internet; sem internet mostra os últimos preços guardados.</p>
+  <footer class="fontes">
+    <h3>Fontes</h3>
+    <ul>
+      <li><a href="https://dodia.ao" target="_blank" rel="noopener">dodia.ao — Preço do Dia (preços agrícolas diários)</a></li>
+      <li><a href="https://angolex.com/paginas/decreto-executivo-conjunto/precos-de-referencia-dos-produtos-nacionais-elegiveis-para-campanha-agricola-2025a2026a-16a-25a.html" target="_blank" rel="noopener">Decreto Executivo Conjunto n.º 16/25 — preços de referência 2025/2026</a></li>
+      <li>Estimativas de mercado (retalho) — actualizadas automaticamente quando há internet</li>
+    </ul>
+  </footer>
+</main>
+<script>
+const INTERVALO = 15 * 60 * 1000; // 15 minutos
+const SEED = null; // usa localStorage/servidor; primeira abertura precisa de ligação ao PC ou internet
+let dados = null;
+
+function medias(mercados, tipo) {
+  const v = mercados.filter(m => m.tipo === tipo).map(m => m.preco);
+  return v.length ? Math.round(v.reduce((a, b) => a + b) / v.length) : null;
+}
+function kz(n) { return n == null ? '—' : n.toLocaleString('pt-PT') + ' Kz'; }
+
+function desenhar() {
+  if (!dados) return;
+  const lista = document.getElementById('lista');
+  lista.innerHTML = '';
+  dados.produtos.filter(p => p.telefone).forEach(p => {
+    const min = p.mercados.reduce((a, b) => a.preco < b.preco ? a : b);
+    const mi = medias(p.mercados, 'informal'), mf = medias(p.mercados, 'formal');
+    const linhas = [...p.mercados].sort((a, b) => a.preco - b.preco).map(m =>
+      `<tr><td>${m.provincia}</td><td>${m.mercado}</td>
+       <td><span class="tipo ${m.tipo}">${m.tipo}</span></td>
+       <td class="preco ${m === min ? 'barato' : ''}">${kz(m.preco)}</td></tr>`).join('');
+    const dif = (mi && mf) ? ` · formal ${Math.round((mf - mi) / mi * 100) > 0 ? '+' : ''}${Math.round((mf - mi) / mi * 100)}% vs informal` : '';
+    lista.insertAdjacentHTML('beforeend', `
+      <div class="cartao">
+        <h2>${p.nome} <span class="variedade">${p.variedade}</span></h2>
+        <table><tr><th>Província</th><th>Mercado</th><th>Tipo</th><th>Preço (${p.unidade})</th></tr>${linhas}</table>
+        <div class="resumo">💰 Mais barato: <b>${min.provincia}</b> (${kz(min.preco)}) ·
+        informal ~${kz(mi)} · formal ~${kz(mf)}${dif}</div>
+      </div>`);
+  });
+  const quando = (dados.atualizado_em || '').slice(0, 16).replace('T', ' ');
+  document.getElementById('estado').textContent =
+    (navigator.onLine ? '🟢 Online' : '🔴 Offline — últimos preços guardados') +
+    ' · actualizado em ' + quando + ' · actualiza a cada 15 min';
+}
+
+async function actualizar() {
+  try {
+    const r = await fetch('dados/precos.json?t=' + Date.now(), { cache: 'no-store' });
+    if (r.ok) {
+      dados = await r.json();
+      localStorage.setItem('precos', JSON.stringify(dados));
+    }
+  } catch (e) { /* offline — mantém a cache */ }
+  if (!dados) {
+    const cache = localStorage.getItem('precos');
+    if (cache) dados = JSON.parse(cache);
+  }
+  if (dados) desenhar();
+  else document.getElementById('estado').textContent =
+    '⚠️ Sem dados. Liga o telefone ao Wi-Fi do PC e abre a app uma primeira vez.';
+}
+
+function textoPartilha() {
+  if (!dados) return '';
+  const l = ['🇦🇴 PREÇOS AGRÍCOLAS — ANGOLA', 'Actualizado: ' + dados.atualizado_em.slice(0, 16).replace('T', ' '), ''];
+  dados.produtos.filter(p => p.telefone).forEach(p => {
+    const min = p.mercados.reduce((a, b) => a.preco < b.preco ? a : b);
+    const mi = medias(p.mercados, 'informal'), mf = medias(p.mercados, 'formal');
+    l.push(`• ${p.nome} (${p.variedade}): informal ~${kz(mi)} | formal ~${kz(mf)} | mais barato: ${min.provincia}`);
+  });
+  return l.join('\n');
+}
+function partilharWhatsApp() { location.href = 'https://wa.me/?text=' + encodeURIComponent(textoPartilha()); }
+async function partilharInstagram() {
+  if (navigator.share) { try { await navigator.share({ text: textoPartilha() }); return; } catch (e) {} }
+  await navigator.clipboard.writeText(textoPartilha());
+  alert('Texto copiado! Cola no Instagram (stories ou publicação).');
+}
+
+if ('serviceWorker' in navigator && location.protocol.startsWith('http'))
+  navigator.serviceWorker.register('sw.js');
+actualizar();
+setInterval(actualizar, INTERVALO);
+window.addEventListener('online', actualizar);
+</script>
+</body>
+</html>

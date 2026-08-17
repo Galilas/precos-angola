@@ -1,0 +1,601 @@
+{
+  "atualizado_em": "2026-08-17T12:30:51",
+  "ultima_tentativa": "2026-08-17T12:30:51",
+  "online": true,
+  "moeda": "AOA",
+  "fontes": [
+    "Decreto Executivo Conjunto n.º 16/25 (preços de referência campanha 2025/2026)",
+    "dodia.ao — Preço do Dia (preços agrícolas diários em Angola)",
+    "Estimativas de mercado (retalho) — actualizadas automaticamente quando há internet"
+  ],
+  "produtos": [
+    {
+      "id": "milho_branco",
+      "nome": "Milho",
+      "variedade": "Branco",
+      "categoria": "Cereais",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 280000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 400
+        },
+        {
+          "provincia": "Bié",
+          "mercado": "Mercado do Cuito",
+          "tipo": "informal",
+          "preco": 380
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Kikolo",
+          "tipo": "informal",
+          "preco": 600
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 850
+        }
+      ]
+    },
+    {
+      "id": "milho_amarelo",
+      "nome": "Milho",
+      "variedade": "Amarelo",
+      "categoria": "Cereais",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 280000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Malanje",
+          "mercado": "Mercado de Malanje",
+          "tipo": "informal",
+          "preco": 350
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado dos Congoleses",
+          "tipo": "informal",
+          "preco": 550
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 780
+        }
+      ]
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "variedade": "Grão",
+      "categoria": "Oleaginosas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 320000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Malanje",
+          "mercado": "Produtores locais",
+          "tipo": "informal",
+          "preco": 600
+        },
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 650
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1200
+        }
+      ]
+    },
+    {
+      "id": "feijao_manteiga",
+      "nome": "Feijão",
+      "variedade": "Manteiga",
+      "categoria": "Leguminosas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 650000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 1300
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Trinta",
+          "tipo": "informal",
+          "preco": 1700
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 2300
+        }
+      ]
+    },
+    {
+      "id": "feijao_preto",
+      "nome": "Feijão",
+      "variedade": "Preto",
+      "categoria": "Leguminosas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 700000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Bié",
+          "mercado": "Mercado do Cuito",
+          "tipo": "informal",
+          "preco": 1400
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Kikolo",
+          "tipo": "informal",
+          "preco": 1800
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 2400
+        }
+      ]
+    },
+    {
+      "id": "feijao_espera_cunhado",
+      "nome": "Feijão",
+      "variedade": "Espera-cunhado",
+      "categoria": "Leguminosas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huíla",
+          "mercado": "Mercado do Lubango",
+          "tipo": "informal",
+          "preco": 1100
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Trinta",
+          "tipo": "informal",
+          "preco": 1500
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 2000
+        }
+      ]
+    },
+    {
+      "id": "feijao_raiado",
+      "nome": "Feijão",
+      "variedade": "Raiado (catarino)",
+      "categoria": "Leguminosas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 600000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 1200
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado dos Congoleses",
+          "tipo": "informal",
+          "preco": 1600
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 2100
+        }
+      ]
+    },
+    {
+      "id": "tomate",
+      "nome": "Tomate",
+      "variedade": "Nacional",
+      "categoria": "Hortícolas",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 500
+        },
+        {
+          "provincia": "Huíla",
+          "mercado": "Mercado do Lubango",
+          "tipo": "informal",
+          "preco": 600
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Kikolo",
+          "tipo": "informal",
+          "preco": 1200
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1800
+        }
+      ]
+    },
+    {
+      "id": "cafe_arabica",
+      "nome": "Café",
+      "variedade": "Arábica",
+      "categoria": "Café",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 1241900,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Comercial grão (produtor)",
+          "tipo": "informal",
+          "preco": 2500
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Torrado/moído (formal)",
+          "tipo": "formal",
+          "preco": 8500
+        }
+      ]
+    },
+    {
+      "id": "cafe_robusta",
+      "nome": "Café",
+      "variedade": "Robusta (Amboim)",
+      "categoria": "Café",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 922067,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Cuanza Sul",
+          "mercado": "Amboim (produtor)",
+          "tipo": "informal",
+          "preco": 1800
+        },
+        {
+          "provincia": "Uíge",
+          "mercado": "Comercial grão (produtor)",
+          "tipo": "informal",
+          "preco": 1700
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Torrado/moído (formal)",
+          "tipo": "formal",
+          "preco": 6500
+        }
+      ]
+    },
+    {
+      "id": "arroz_agulha",
+      "nome": "Arroz",
+      "variedade": "Agulha (nacional)",
+      "categoria": "Cereais",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 300000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Bié",
+          "mercado": "Camacupa (produtor)",
+          "tipo": "informal",
+          "preco": 800
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Trinta",
+          "tipo": "informal",
+          "preco": 1000
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1300
+        }
+      ]
+    },
+    {
+      "id": "arroz_corrente",
+      "nome": "Arroz",
+      "variedade": "Corrente",
+      "categoria": "Cereais",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 300000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Moxico",
+          "mercado": "Mercado do Luena",
+          "tipo": "informal",
+          "preco": 700
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Kikolo",
+          "tipo": "informal",
+          "preco": 850
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1100
+        }
+      ]
+    },
+    {
+      "id": "mandioca",
+      "nome": "Mandioca",
+      "variedade": "Fresca",
+      "categoria": "Raízes e tubérculos",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Malanje",
+          "mercado": "Mercado de Malanje",
+          "tipo": "informal",
+          "preco": 300
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado do Kikolo",
+          "tipo": "informal",
+          "preco": 500
+        }
+      ]
+    },
+    {
+      "id": "fuba_bombo",
+      "nome": "Fuba de bombó",
+      "variedade": "—",
+      "categoria": "Raízes e tubérculos",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Uíge",
+          "mercado": "Mercado do Uíge",
+          "tipo": "informal",
+          "preco": 900
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1400
+        }
+      ]
+    },
+    {
+      "id": "batata_rena",
+      "nome": "Batata rena",
+      "variedade": "—",
+      "categoria": "Raízes e tubérculos",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huambo",
+          "mercado": "Mercado central (Huambo)",
+          "tipo": "informal",
+          "preco": 500
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 950
+        }
+      ]
+    },
+    {
+      "id": "batata_doce",
+      "nome": "Batata-doce",
+      "variedade": "—",
+      "categoria": "Raízes e tubérculos",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Benguela",
+          "mercado": "Mercado do Lobito",
+          "tipo": "informal",
+          "preco": 350
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Mercado dos Congoleses",
+          "tipo": "informal",
+          "preco": 600
+        }
+      ]
+    },
+    {
+      "id": "ginguba",
+      "nome": "Ginguba (amendoim)",
+      "variedade": "Grão",
+      "categoria": "Oleaginosas",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 600000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Malanje",
+          "mercado": "Mercado de Malanje",
+          "tipo": "informal",
+          "preco": 1000
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1600
+        }
+      ]
+    },
+    {
+      "id": "massango",
+      "nome": "Massango",
+      "variedade": "—",
+      "categoria": "Cereais",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 200000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Cunene",
+          "mercado": "Mercado de Ondjiva",
+          "tipo": "informal",
+          "preco": 250
+        },
+        {
+          "provincia": "Huíla",
+          "mercado": "Mercado do Lubango",
+          "tipo": "informal",
+          "preco": 300
+        }
+      ]
+    },
+    {
+      "id": "massambala",
+      "nome": "Massambala",
+      "variedade": "—",
+      "categoria": "Cereais",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 200000,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Huíla",
+          "mercado": "Mercado do Lubango",
+          "tipo": "informal",
+          "preco": 250
+        },
+        {
+          "provincia": "Namibe",
+          "mercado": "Mercado do Moçâmedes",
+          "tipo": "informal",
+          "preco": 300
+        }
+      ]
+    },
+    {
+      "id": "cebola",
+      "nome": "Cebola",
+      "variedade": "Nacional",
+      "categoria": "Hortícolas",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Benguela",
+          "mercado": "Mercado do Lobito",
+          "tipo": "informal",
+          "preco": 700
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 1100
+        }
+      ]
+    },
+    {
+      "id": "banana",
+      "nome": "Banana",
+      "variedade": "Nacional",
+      "categoria": "Frutas",
+      "telefone": false,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": null,
+      "estimado": true,
+      "mercados": [
+        {
+          "provincia": "Benguela",
+          "mercado": "Mercado do Lobito",
+          "tipo": "informal",
+          "preco": 400
+        },
+        {
+          "provincia": "Bengo",
+          "mercado": "Caxito (produtor)",
+          "tipo": "informal",
+          "preco": 350
+        },
+        {
+          "provincia": "Luanda",
+          "mercado": "Supermercado (formal)",
+          "tipo": "formal",
+          "preco": 700
+        }
+      ]
+    }
+  ]
+}

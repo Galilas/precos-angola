@@ -1,0 +1,13 @@
+{
+  "name": "Preços Agrícolas — Angola",
+  "short_name": "Preços AO",
+  "description": "Preços dos produtos agrícolas nacionais de Angola, por província, mercado formal e informal.",
+  "lang": "pt-AO",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f6f3",
+  "theme_color": "#1a5d1a",
+  "icons": [
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
