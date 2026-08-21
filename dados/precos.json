@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-08-21T11:45:50",
-  "ultima_tentativa": "2026-08-21T11:45:50",
+  "atualizado_em": "2026-08-21T12:00:50",
+  "ultima_tentativa": "2026-08-21T12:00:50",
   "online": true,
   "moeda": "AOA",
   "fontes": [
@@ -74,6 +74,17 @@
           "preco": 780
         }
       ]
+    },
+    {
+      "id": "milho_racao",
+      "nome": "Milho",
+      "variedade": "Ração animal (grão)",
+      "categoria": "Cereais",
+      "telefone": true,
+      "unidade": "Kz/kg",
+      "referencia_oficial_kz_ton": 280000,
+      "estimado": true,
+      "mercados": []
     },
     {
       "id": "soja",
