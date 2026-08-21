@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-08-21T13:20:15",
-  "ultima_tentativa": "2026-08-21T13:20:15",
+  "atualizado_em": "2026-08-21T13:30:50",
+  "ultima_tentativa": "2026-08-21T13:30:50",
   "online": true,
   "moeda": "AOA",
   "fontes": [
@@ -43,7 +43,8 @@
           "tipo": "formal",
           "preco": 850
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "milho_amarelo",
@@ -73,7 +74,8 @@
           "tipo": "formal",
           "preco": 780
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "milho_racao",
@@ -84,7 +86,8 @@
       "unidade": "Kz/kg",
       "referencia_oficial_kz_ton": 280000,
       "estimado": true,
-      "mercados": []
+      "mercados": [],
+      "uso": "ração animal"
     },
     {
       "id": "soja",
@@ -114,7 +117,8 @@
           "tipo": "formal",
           "preco": 1200
         }
-      ]
+      ],
+      "uso": "desconhecido"
     },
     {
       "id": "feijao_manteiga",
@@ -144,7 +148,8 @@
           "tipo": "formal",
           "preco": 2300
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "feijao_preto",
@@ -174,7 +179,8 @@
           "tipo": "formal",
           "preco": 2400
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "feijao_espera_cunhado",
@@ -204,7 +210,8 @@
           "tipo": "formal",
           "preco": 2000
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "feijao_raiado",
@@ -234,7 +241,8 @@
           "tipo": "formal",
           "preco": 2100
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "tomate",
@@ -270,7 +278,8 @@
           "tipo": "formal",
           "preco": 1800
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "cafe_arabica",
@@ -294,7 +303,8 @@
           "tipo": "formal",
           "preco": 8500
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "cafe_robusta",
@@ -324,7 +334,8 @@
           "tipo": "formal",
           "preco": 6500
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "arroz_agulha",
@@ -354,7 +365,8 @@
           "tipo": "formal",
           "preco": 1300
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "arroz_corrente",
@@ -384,7 +396,8 @@
           "tipo": "formal",
           "preco": 1100
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "mandioca",
@@ -408,7 +421,8 @@
           "tipo": "informal",
           "preco": 500
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "fuba_bombo",
@@ -432,7 +446,8 @@
           "tipo": "formal",
           "preco": 1400
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "batata_rena",
@@ -456,7 +471,8 @@
           "tipo": "formal",
           "preco": 950
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "batata_doce",
@@ -480,7 +496,8 @@
           "tipo": "informal",
           "preco": 600
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "ginguba",
@@ -504,7 +521,8 @@
           "tipo": "formal",
           "preco": 1600
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "massango",
@@ -528,7 +546,8 @@
           "tipo": "informal",
           "preco": 300
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "massambala",
@@ -552,7 +571,8 @@
           "tipo": "informal",
           "preco": 300
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "cebola",
@@ -576,7 +596,8 @@
           "tipo": "formal",
           "preco": 1100
         }
-      ]
+      ],
+      "uso": "consumo humano"
     },
     {
       "id": "banana",
@@ -606,7 +627,8 @@
           "tipo": "formal",
           "preco": 700
         }
-      ]
+      ],
+      "uso": "consumo humano"
     }
   ]
 }
